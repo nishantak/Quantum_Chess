@@ -3,6 +3,7 @@
 # TODO: Make it modular, package the code
 # TODO: Tests
 # TODO: Only classical moves when king in check
+# TODO: Quantum piece attack quantum piece
 
 import sys
 import time
@@ -283,6 +284,7 @@ class ChessGame:
             if self.board[row][col] is not None:
                 return  
             self.quantum_selection.append((row, col))
+            
         elif len(self.quantum_selection) == 1:
             if self.board[row][col] is not None:
                 return 
@@ -596,7 +598,8 @@ class ChessGame:
             "2. Quantum Mode:",
             "   - Pieces can superimpose in two positions simultaneously",
             "   - Cannot capture pieces to initiate quantum mode",
-            "   - Pawns can only enter quantum state on their first move",
+            "   - Pawns can make quantum moves only on their first move",
+            "   - King does not enter quantum state",
             "   - Quantum states collapse after 90 seconds or when observed",
             "   - Quantum pieces are observed when they attack or are attacked",  
             "",
