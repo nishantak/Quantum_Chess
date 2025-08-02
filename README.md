@@ -1,4 +1,4 @@
-# Quantum Chess
+# Quantum Chess : WIP
 Implemented in Python using Pygame.
 
 ## Steps to Run
